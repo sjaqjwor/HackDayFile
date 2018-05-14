@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ExamController {
-
     @GetMapping("")
     public ResponseEntity<?> exam(){
         return new ResponseEntity<>("hello", HttpStatus.OK);
     }
+
 }
