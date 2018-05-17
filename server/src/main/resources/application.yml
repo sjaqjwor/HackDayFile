@@ -1,9 +1,13 @@
 spring:
-    datasource:
-        driverClassName: com.mysql.jdbc.Driver
-        url: ${url}
-        username: ${db_username}
-        password: ${db_password}
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: ${url}
+    username: ${db_username}
+    password: ${db_password}
+  http:
+    multipart:
+      max-request-size: 50MB
+      max-file-size: 2MB
 
 logging:
   level: error
@@ -12,4 +16,8 @@ logging:
 mybatis:
     config-location: classpath:mybatis-config.xml
     type-aliases-package: hackday.webtoon.models
+
+image:
+    dir:  ${user.home}/imageserver/
+    url: localhost:8080/upload/
 

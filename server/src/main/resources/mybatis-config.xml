@@ -6,11 +6,15 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
-        <package name="hackday.webtoon.Mappers.ManuscriptMapper"/>
-        <package name="hackday.webtoon.Mappers.UserMapper"/>
+        <package name="hackday.webtoon.mappers.ManuscriptMapper"/>
+        <package name="hackday.webtoon.mappers.ThumbnailMapper"/>
+        <package name="hackday.webtoon.mappers.ImageMapper"/>
+        <package name="hackday.webtoon.mappers.UserMapper"/>
     </typeAliases>
     <mappers>
         <mapper resource="mappers/ManuscriptMapper.xml"/>
+        <mapper resource="mappers/ImageMapper.xml"/>
+        <mapper resource="mappers/ThumbnailMapper.xml"/>
         <mapper resource="mappers/UserMapper.xml"/>
     </mappers>
 </configuration>

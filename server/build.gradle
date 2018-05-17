@@ -42,5 +42,7 @@ dependencies {
 	compile('org.projectlombok:lombok:1.16.18')
 	compile('org.apache.commons:commons-lang3:3.7')
 	compile('com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4')
+	compile 'org.apache.tika:tika-parsers:1.7'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
 }
