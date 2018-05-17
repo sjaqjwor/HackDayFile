@@ -9,6 +9,7 @@ import org.apache.ibatis.type.Alias;
 @Getter
 @Setter
 @ToString
+@Alias("User")
 public class User {
     @JsonProperty("id")
     Integer userId;

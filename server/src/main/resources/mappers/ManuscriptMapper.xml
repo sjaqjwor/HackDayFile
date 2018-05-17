@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="hackday.webtoon.Mappers.ManuscriptMapper">
+<mapper namespace="hackday.webtoon.mappers.ManuscriptMapper">
     <resultMap id="ManuscriptMap" type="Manuscript">
         <id column="manuscript_id" property="manuscriptId"  />
         <result column="user_id" property="userId" />

@@ -1,7 +1,7 @@
 package hackday.webtoon.mappers;
 
 import hackday.webtoon.models.Manuscript;
-import hackday.webtoon.models.dto.CartoonInfoAtTurn;
+import hackday.webtoon.models.dtos.CartoonInfoAtTurn;
 import hackday.webtoon.models.dtos.ManuscriptSaveDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

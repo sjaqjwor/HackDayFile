@@ -1,4 +1,4 @@
-package hackday.webtoon.models.dto;
+package hackday.webtoon.models.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;

@@ -1,8 +1,7 @@
 package hackday.webtoon.controllers;
 
-import hackday.webtoon.models.dto.ManuscriptDto;
-import hackday.webtoon.models.Manuscript;
-import hackday.webtoon.models.dto.CartoonInfoAtTurn;
+import hackday.webtoon.models.dtos.ManuscriptDto;
+import hackday.webtoon.models.dtos.CartoonInfoAtTurn;
 import hackday.webtoon.services.ManuscriptService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

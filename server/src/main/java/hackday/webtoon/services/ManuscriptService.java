@@ -4,12 +4,11 @@ import hackday.webtoon.mappers.ManuscriptMapper;
 import hackday.webtoon.exceptions.NotFoundException;
 import hackday.webtoon.models.Image;
 import hackday.webtoon.models.Manuscript;
-import hackday.webtoon.models.dto.CartoonInfoAtTurn;
-import hackday.webtoon.models.dto.ManuscriptDto;
+import hackday.webtoon.models.dtos.CartoonInfoAtTurn;
+import hackday.webtoon.models.dtos.ManuscriptDto;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
