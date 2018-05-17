@@ -9,9 +9,11 @@ import org.apache.ibatis.type.Alias;
 public class User {
     private Integer userId;
     private String name;
-    private enum  role {
-        AUTHOR, READER
-    }
+    private RoleType role;
     private String email;
     private String password;
+
+    private enum  RoleType {
+        AUTHOR, READER
+    }
 }
