@@ -7,9 +7,11 @@
     </settings>
     <typeAliases>
         <package name="hackday.webtoon.Mappers.ManuscriptMapper"/>
+        <package name="hackday.webtoon.Mappers.UserMapper"/>
     </typeAliases>
     <mappers>
         <mapper resource="mappers/ManuscriptMapper.xml"/>
+        <mapper resource="mappers/UserMapper.xml"/>
     </mappers>
 </configuration>
 
