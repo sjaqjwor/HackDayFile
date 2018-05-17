@@ -1,17 +1,15 @@
-mybatis:
-    configuration:
-        map-underscore-to-camel-case: true
-        default-fetch-size: 100
-        default-statement-timeout: 30
-    mapper-locations: classpath*:**/mappers/*.xml
-
 spring:
     datasource:
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost/${db_name}
+        url: ${url}
         username: ${db_username}
         password: ${db_password}
 
-server:
-    port: 8080
+logging:
+  level: error
+  path: logs
+
+mybatis:
+    config-location: classpath:mybatis-config.xml
+    type-aliases-package: hackday.webtoon.models
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hackday.webtoon.mappers.ManuscriptMapper">
+    <select id="findByUserId" resultType="Manuscript">
+        SELECT
+            manuscript_id,
+            user_id,
+            title,
+            summary,
+            turn,
+            updated_at
+        FROM manuscript
+        WHERE user_id = #{userId}
+        ORDER BY manuscript_id DESC
+        LIMIT #{offset}, #{count}
+    </select>
+
+    <select id="findOneById" resultType="Manuscript">
+        SELECT
+            manuscript_id,
+            user_id,
+            title,
+            summary,
+            turn,
+            updated_at
+        FROM manuscript
+        WHERE manuscript_id = #{manuscriptId}
+    </select>
+</mapper>

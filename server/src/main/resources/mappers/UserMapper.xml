@@ -4,7 +4,7 @@
 
 <mapper namespace="hackday.webtoon.mappers.UserMapper">
 
-    <select id="selectAll" resultType="hackday.webtoon.models.User">
+    <select id="selectAll" resultType="User">
         SELECT
                 user_id, name, email
         FROM

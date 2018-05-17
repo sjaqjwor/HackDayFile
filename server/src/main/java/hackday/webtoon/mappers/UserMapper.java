@@ -7,5 +7,5 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    public List<User> selectAll();
+    List<User> selectAll();
 }
