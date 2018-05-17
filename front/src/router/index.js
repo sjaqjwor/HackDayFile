@@ -8,6 +8,7 @@ import Manuscript from '@/components/Cartoonists/Manuscripts/Manuscript'
 import Applicant from '@/components/Cartoonists/Applicants/Applicant'
 import Accepter from '@/components/Cartoonists/Accepters/Accepter'
 import Competitor from '@/components/Cartoonists/Competitors/Competitor'
+import CreateManuscript from '@/components/Cartoonists/Manuscripts/CreateManuscript'
 
 Vue.use(Router)
 export default new Router({
@@ -46,6 +47,10 @@ export default new Router({
           path: 'competitors',
           name: 'Competitor',
           component: Competitor
+        }, {
+          path: 'create',
+          name: 'CreateManuscript',
+          component: CreateManuscript
         }
       ]
     }

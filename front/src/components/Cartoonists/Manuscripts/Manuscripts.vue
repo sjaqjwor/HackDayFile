@@ -13,8 +13,10 @@
         <md-card-content>
           {{ manuscript.summary }}
         </md-card-content>
+      
       </md-ripple>
     </md-card>
+    <md-button class="md-raised" @click="add">Add</md-button>
   </div>
 </template>
 
@@ -30,6 +32,9 @@ export default {
   methods: {
     detail (id) {
       this.$router.push({name: 'Manuscript', params: {id: id}})
+    },
+    add () {
+      this.$router.push({name: 'CreateManuscript'})
     }
   },
   created: function () {

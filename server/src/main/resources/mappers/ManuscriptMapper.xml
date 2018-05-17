@@ -38,4 +38,8 @@
         LEFT JOIN image i ON m.manuscript_id = i.manuscript_id
         WHERE m.manuscript_id = #{manuscriptId};
     </select>
+    <insert id="addManuScript" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO webtoon.manuscript(user_id,title,summary,turn)
+        VALUES (#{userId},#{title},#{summary},#{turn})
+    </insert>
 </mapper>

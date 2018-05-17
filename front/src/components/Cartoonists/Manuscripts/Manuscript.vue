@@ -7,7 +7,7 @@
         <div class="md-layout md-gutter">
           <div class="md-layout-item md-small-size-100">
             <md-field>
-              <md-input v-model="manuscript.summary" placeholder="주제"> {{ manuscript.summary }} </md-input>
+              <md-input v-model="manuscript.summary" placeholder="주제"> {{ manuscript.title }} </md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100">
