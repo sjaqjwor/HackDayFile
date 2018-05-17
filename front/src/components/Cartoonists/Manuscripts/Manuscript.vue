@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LoadImage :no="no"></LoadImage>
+    <LoadImage :id="id"></LoadImage>
 
     <md-content>
       <form>

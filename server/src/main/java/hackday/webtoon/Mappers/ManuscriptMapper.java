@@ -1,4 +1,4 @@
-package hackday.webtoon.mappers;
+package hackday.webtoon.Mappers;
 
 import hackday.webtoon.models.Manuscript;
 import org.apache.ibatis.annotations.Mapper;

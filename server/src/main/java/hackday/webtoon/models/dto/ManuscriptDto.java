@@ -1,30 +1,29 @@
-package hackday.webtoon.models;
+package hackday.webtoon.models.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
-import org.apache.ibatis.type.Alias;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by koseungbin on 2018. 5. 16.
+ * Created by koseungbin on 2018. 5. 17.
  */
 
 @Getter
 @Setter
-@Alias("Manuscript")
-public class Manuscript {
+public class ManuscriptDto {
+    @JsonProperty("id")
     private long manuscriptId;
     private String title;
     private String summary;
     private String turn;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updatedAt;
-    private long userId;
-    private Set<Image> images;
+    private Map<Long, String> imagePath;
 }

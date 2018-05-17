@@ -1,8 +1,8 @@
 <template>
   <div>
     <md-content>
-      <div v-for="(path, index) in paths" v-bind:key="index">
-        <img v-bind:src=path>
+      <div v-for="(path, key, index) in paths" v-bind:key="index">
+        <img v-lazy="path">
       </div>
     </md-content>
   </div>
@@ -11,10 +11,27 @@
 <script>
 export default {
   name: 'LoadImage',
+  props: ['id'],
   data: function () {
     return {
-      paths: ['/static/logo.png', '/static/logo.png', '/static/logo.png', '/static/logo.png', '/static/logo.png']
+      paths: []
     }
+  },
+  methods: {
+    loadFild: function () {
+      this.$http.get('/api/manuscripts/' + this.id)
+        .then((result) => {
+          this.paths = result.body.imagePath
+        }, (error) => {
+          console.error(error.data)
+        })
+    }
+  },
+  created () {
+    this.loadFild()
+  },
+  watch: {
+
   }
 }
 </script>
