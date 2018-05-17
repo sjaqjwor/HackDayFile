@@ -1,9 +1,10 @@
 package hackday.webtoon.services;
 
-import hackday.webtoon.Mappers.ManuscriptMapper;
+import hackday.webtoon.mappers.ManuscriptMapper;
 import hackday.webtoon.exceptions.NotFoundException;
 import hackday.webtoon.models.Image;
 import hackday.webtoon.models.Manuscript;
+import hackday.webtoon.models.dto.CartoonInfoAtTurn;
 import hackday.webtoon.models.dto.ManuscriptDto;
 import org.springframework.stereotype.Service;
 
@@ -67,6 +68,11 @@ public class ManuscriptService {
     * */
     private Map<Long, String> toImagePath(Set<Image> images) {
         return images.stream().collect(Collectors.toMap(Image::getSequence, Image::getPath));
+    }
+
+    // offset>
+    public LinkedList<CartoonInfoAtTurn> findByTurn(int turn) {
+        return manuscriptMapper.findByTurn(turn);
     }
 
 }

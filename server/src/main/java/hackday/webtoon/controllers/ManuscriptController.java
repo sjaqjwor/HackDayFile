@@ -1,6 +1,8 @@
 package hackday.webtoon.controllers;
 
 import hackday.webtoon.models.dto.ManuscriptDto;
+import hackday.webtoon.models.Manuscript;
+import hackday.webtoon.models.dto.CartoonInfoAtTurn;
 import hackday.webtoon.services.ManuscriptService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,6 +33,12 @@ public class ManuscriptController {
     @GetMapping(value = "/manuscripts/{manuscriptId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ManuscriptDto findOne(@PathVariable("manuscriptId") long manuscriptId) {
         return manuscriptService.findOneById(manuscriptId);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @GetMapping(value = "/manuscripts/turn={turn}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public LinkedList<CartoonInfoAtTurn> find(@PathVariable(value = "turn") int turn) {
+        return manuscriptService.findByTurn(turn);
     }
 
 }
